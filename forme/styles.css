@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('images/duck.jpg'); 
+    background-size: cover;
+    background-position: center;
+    animation: slideHorizontal 10s linear infinite alternate, slideVertical 5s linear infinite alternate; 
+}
+
+@keyframes slideHorizontal {
+    0% {
+        background-position: left top;
+    }
+    100% {
+        background-position: right top;
+    }
+}
+
+@keyframes slideVertical {
+    0% {
+        background-position: left top;
+    }
+    100% {
+        background-position: left bottom;
+    }
+}
+
+
+#game-container {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#game-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for card effect */
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background-color: #bfefff;
+}
+
+#start-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#game-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#login-form {
+    margin-bottom: 20px;
+}
+
+#name-input,
+#level-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"],
+#start-game {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover,
+#start-game:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#greeting,
+#message {
+    margin-bottom: 10px;
+}
+
+#greeting {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#message {
+    font-style: italic;
+}
+
+body.birds-appeared {
+    background-image: url('images/gamebackGround.jpg'); 
+}
+.bird {
+    position: absolute;
+    height: 120px; 
+    width: auto;
+    animation: birdMove 3s linear infinite; 
+}
+
+@keyframes birdMove {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+#score{
+    position: fixed;
+    font-size: xx-large; 
+    color: rgb(147, 0, 0);
+}
+#level{
+    position: fixed;
+    font-size: xx-large; 
+    color: rgb(147, 0, 0);
+    padding-left: 70px;
+    margin-left: 70px;
+    top: 10px;
+}
+
+#birds-left {
+    position: fixed;
+    font-size: xx-large;
+    margin-bottom: 20px;
+    
+    color: rgb(147, 0, 0);
+}
+#score {
+    top: 10px;
+    left: 10px;
+}
+
+#birds-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#thanks {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.shooting-image {
+    position: absolute;
+    z-index: 9999;
+    display: block;
+    width: 30px; 
+    height: 30px;
+    pointer-events: none; 
+}
+
+#game-area {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}

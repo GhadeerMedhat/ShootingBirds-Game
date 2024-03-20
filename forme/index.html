@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Birds Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <audio id="background-audio">
+        <source src="audio/bg_sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+
+<div id="start-container">
+    <button id="start-button">PLAY</button>
+</div>
+
+<div id="game-container" style="display: none;">
+   
+    <form id="login-form">
+        <h2>Enter Your Details</h2>
+        <input type="text" id="name-input" placeholder="Enter your name here" required>
+        <select id="level-select" required>
+            <option value="">Choose your level</option>
+            <option value="easy">Easy</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button type="submit">Play</button>
+    </form>
+    
+    <div id="greeting" style="display: none;"></div>
+    <p id="message" style="display: none;">Have a nice game!<br><img src="images/gold2.gif" alt="Gold Image" style="width: 100px; height: auto;"></p>
+
+    <button id="start-game" style="display: none;">Start</button>
+</div>
+<div id="game-area">
+    <div id="score">Score: <span id="score-value">0</span></div>
+    <div id="level">Level: <span id="level-value">-</span></div>
+    <div id="birds-left">Birds Left: <span id="birds-left-value">-</span></div>
+    
+    <img  id="shooting-image" class="shooting-image" src="images/shooting.png" alt="Shooting Image">
+</div>
+<div id="message-box" class="hidden">
+    <div id="message">Congratulations!</div>
+    <img src="images/correct.jpg" alt="Congratulations Image">
+    <div id="thanks">Thanks for playing!</div>
+    <button id="play-again">Play Again</button>
+    <button id="back">Back</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
